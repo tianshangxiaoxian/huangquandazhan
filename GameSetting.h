@@ -9,11 +9,11 @@ const int SceneHeight=900;
 const float huangquanScale=0.1;
 const int huangquanspeed=20;
 
-const double laogongScale=0.08;
+const double laogongScale=0.18;
 const double laogongTimer=50;
 const int laogongsudu=5;
 
-const double BulletScale=0.08;
+const double BulletScale=0.15;
 const double BulletTimer=50;
-const int bulletspeed=15;
+const int bulletspeed=15 ;
 }
