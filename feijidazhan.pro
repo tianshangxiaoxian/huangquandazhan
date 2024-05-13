@@ -1,5 +1,5 @@
 QT       += core gui
-
+QT       += multimedia
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -22,7 +22,9 @@ SOURCES += \
     laogong.cpp \
     main.cpp \
     mainwindow.cpp \
-    score.cpp
+    mypushbutton.cpp \
+    score.cpp \
+    zhando.cpp
 
 HEADERS += \
     GameSetting.h \
@@ -31,7 +33,9 @@ HEADERS += \
     huangquan.h \
     laogong.h \
     mainwindow.h \
-    score.h
+    mypushbutton.h \
+    score.h \
+    zhando.h
 
 FORMS += \
     mainwindow.ui

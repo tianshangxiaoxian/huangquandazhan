@@ -8,10 +8,14 @@
 #include"health.h"
 #include<QGraphicsTextItem>
 #include<QFontMetrics>
+#include<QtMultimedia>
+#include <QSound>
+#include <QMediaPlayer>
+#include <QAudioOutput>
 using namespace GameSetting;
 Huangquan::Huangquan(QGraphicsPixmapItem *parent):QGraphicsPixmapItem(parent)
 {//给黄泉附图片
-    setPixmap(QPixmap(":/image/20240507192009.jpg"));
+    setPixmap(QPixmap(":/20240507192009.png"));
     setScale(huangquanScale);
     //黄泉所在的位置
     setPos(SceneWidth/2-boundingRect().width()*huangquanScale/2,
@@ -47,6 +51,12 @@ void Huangquan::keyPressEvent(QKeyEvent *event)
                        y());
         scene()->addItem(bullet);
         //播放音效
+        QSound *sound = new QSound(":/zidanfashe.MP3"); // 创建QSound对象
+        sound->play(); // 播放声音
+        //QMediaPlayer fashe ;
+        //fashe.setVideoOutput(&QAudioOutput());
+        //fashe.setVolume(":/zidanfashe.MP3");
+        //fashe.play();
     break;
 }
     }
