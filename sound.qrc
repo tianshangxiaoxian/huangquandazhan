@@ -1,7 +1,2 @@
-<RCC>
-    <qresource prefix="/">
-        <file>zidanfashe.MP3</file>
-        <file>zhanjiaigei_com.mp3</file>
-        <file>badaozhan.wav</file>
-    </qresource>
-</RCC>
+<!DOCTYPE RCC>
+<RCC version="1.0"/>

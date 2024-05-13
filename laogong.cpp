@@ -7,12 +7,9 @@
 #include"bullet.h"
 #include"score.h"
 #include"health.h"
-#include<QSound>
-#include <QMediaPlayer>
-#include <QAudioOutput>
 Laogong::Laogong(QGraphicsPixmapItem*parent):QGraphicsPixmapItem(parent)
 {//设置图片
-setPixmap(QPixmap(":/202405071920ad.png"));
+setPixmap(QPixmap(":/image/0240507190735.jpg"));
 setScale(GameSetting::laogongScale);
 //出现位置
 int max=GameSetting::SceneWidth-boundingRect().width()*GameSetting::laogongScale;
@@ -32,8 +29,6 @@ void Laogong:: timerEvent(QTimerEvent *){
             return;
         }
         if(typeid(*item)==typeid(Bullet)){
-            QSound *sound = new QSound(":/badaozhan.wav"); // 创建QSound对象
-            sound->play(); // 播放声音
             Score::getInstance().increase();
             scene()->removeItem(item);
             scene()->removeItem(this);

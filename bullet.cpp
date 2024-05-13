@@ -3,7 +3,7 @@
 #include<QGraphicsScene>
 Bullet::Bullet(QGraphicsPixmapItem*parent):QGraphicsPixmapItem(parent)
 {
-setPixmap(QPixmap(":/20240507190656.png"));
+setPixmap(QPixmap(":/image/20240507190656.jpg"));
 this->setScale(GameSetting::BulletScale);
 startTimer(GameSetting::BulletTimer);}
 void Bullet::timerEvent(QTimerEvent *)

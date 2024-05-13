@@ -2,13 +2,7 @@
     <qresource prefix="/image">
         <file>0240507190735.jpg</file>
         <file>20240507185818.jpg</file>
-        <file>ceaa2ffe88a6a8c80e3a6abda38f176.jpg</file>
-        <file>kaishitubiao.png</file>
-    </qresource>
-    <qresource prefix="/">
-        <file>20240507192009.png</file>
-        <file>20240507190656.png</file>
-        <file>09a78d67ce07e9eaa13c5d7b5d00ff4e.tif</file>
-        <file>202405071920ad.png</file>
+        <file>20240507190656.jpg</file>
+        <file>20240507192009.jpg</file>
     </qresource>
 </RCC>
