@@ -17,23 +17,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     bullet.cpp \
+    bullet1.cpp \
     health.cpp \
     huangquan.cpp \
     laogong.cpp \
     main.cpp \
     mainwindow.cpp \
     mypushbutton.cpp \
+    qiqiao.cpp \
     score.cpp \
     zhando.cpp
 
 HEADERS += \
     GameSetting.h \
     bullet.h \
+    bullet1.h \
     health.h \
     huangquan.h \
     laogong.h \
     mainwindow.h \
     mypushbutton.h \
+    qiqiao.h \
     score.h \
     zhando.h
 

@@ -9,6 +9,8 @@ const int SceneHeight=900;
 const float huangquanScale=0.1;
 const int huangquanspeed=20;
 
+const double Bullet1Scale=0.3;
+
 const double laogongScale=0.18;
 const double laogongTimer=50;
 const int laogongsudu=5;

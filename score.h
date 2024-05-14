@@ -13,9 +13,10 @@ public:
         static Score obj;
         return obj;
       }
+    int score=0;
 private:
 void reset();//重置函数
-int score=0;
+
 
 };
 #endif // SCORE_H

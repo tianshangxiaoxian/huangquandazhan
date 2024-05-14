@@ -8,7 +8,7 @@
 #include"score.h"
 #include"health.h"
 int main(int argc, char *argv[])
-{      //创建黄泉战机
+{
     QApplication a(argc, argv);
     QApplication::setWindowIcon(QIcon(":/image/20240507192009.jpg"));
     a.setApplicationDisplayName("牢公你咋莫了");

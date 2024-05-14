@@ -7,14 +7,16 @@ class Huangquan: public QObject,  public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
+    void zhanjijia();
     Huangquan(QGraphicsPixmapItem*parent=nullptr);
-
+    double   zhanji=0;
     // QGraphicsItem interface
 protected:
     virtual void keyPressEvent(QKeyEvent *event) override;
 private:
     void laogongchuxian();
      void gameOver();
+     void qiqiaochuxian();
     // QObject interface
 protected:
     virtual void timerEvent(QTimerEvent *event) override;

@@ -12,6 +12,9 @@
 #include <QSound>
 #include <QMediaPlayer>
 #include <QAudioOutput>
+#include"bullet1.h"
+#include"qiqiao.h"
+#include"score.h"
 using namespace GameSetting;
 Huangquan::Huangquan(QGraphicsPixmapItem *parent):QGraphicsPixmapItem(parent)
 {//给黄泉附图片
@@ -46,17 +49,25 @@ void Huangquan::keyPressEvent(QKeyEvent *event)
             setPos(x(),y()+huangquanspeed);
    break;
     case Qt::Key_Space:
-        Bullet*bullet=new Bullet;
-        bullet->setPos(x()+boundingRect().width()*huangquanScale/2-bullet->boundingRect().width()*BulletScale/2,
-                       y());
-        scene()->addItem(bullet);
-        //播放音效
-        QSound *sound = new QSound(":/zidanfashe.MP3"); // 创建QSound对象
-        sound->play(); // 播放声音
-        //QMediaPlayer fashe ;
-        //fashe.setVideoOutput(&QAudioOutput());
-        //fashe.setVolume(":/zidanfashe.MP3");
-        //fashe.play();
+        if(1>zhanji>0){  Bullet*bullet=new Bullet;
+          bullet->setPos(x()+boundingRect().width()*huangquanScale/2-bullet->boundingRect().width()*BulletScale/2,
+                         y());
+          scene()->addItem(bullet);
+          //播放音效
+          QSound *sound = new QSound(":/zidanfashe.MP3"); // 创建QSound对象
+          sound->play(); // 播放声音
+          //QMediaPlayer fashe ;
+          //fashe.setVideoOutput(&QAudioOutput());
+          //fashe.setVolume(":/zidanfashe.MP3");
+          //fashe.play();
+        }
+if(zhanji>1){Bullet1*bullet1=new Bullet1;
+    bullet1->setPos(x()+boundingRect().width()*huangquanScale/2-bullet1->boundingRect().width()*Bullet1Scale/2,
+                   y());
+    scene()->addItem(bullet1);
+    zhanji--;
+}
+
     break;
 }
     }
@@ -67,7 +78,13 @@ void Huangquan:: laogongchuxian(){
     scene()->addItem(laogong);
 
 }
+//实现零食出现
+void Huangquan:: qiqiaochuxian(){
 
+    Qiqiao*qiqiao=new Qiqiao;
+    scene()->addItem(qiqiao);
+
+}
 void Huangquan::gameOver()
 {
     playing=false;
@@ -94,7 +111,9 @@ void Huangquan::gameOver()
 }
 void Huangquan::timerEvent(QTimerEvent *event){
 if(playing){
-     laogongchuxian();}
+     laogongchuxian();
+     zhanji+=0.1;}
+//qiqiaochuxian();}
 if(Health::getInstance().gethealth()<=0){
     gameOver();
 }

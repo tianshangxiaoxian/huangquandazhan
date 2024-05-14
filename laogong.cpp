@@ -10,6 +10,7 @@
 #include<QSound>
 #include <QMediaPlayer>
 #include <QAudioOutput>
+#include"bullet1.h"
 Laogong::Laogong(QGraphicsPixmapItem*parent):QGraphicsPixmapItem(parent)
 {//设置图片
 setPixmap(QPixmap(":/202405071920ad.png"));
@@ -41,6 +42,14 @@ void Laogong:: timerEvent(QTimerEvent *){
             delete this;
 
             return;
+        }
+        if(typeid(*item)==typeid(Bullet1)){
+            QSound *sound = new QSound(":/badaozhan.wav"); // 创建QSound对象
+            sound->play(); // 播放声音
+            Score::getInstance().increase();
+            scene()->removeItem(this);
+                         delete this;
+ return;
         }
     }
     setPos(x(),y()+GameSetting::laogongsudu);
