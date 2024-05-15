@@ -25,7 +25,7 @@ Huangquan::Huangquan(QGraphicsPixmapItem *parent):QGraphicsPixmapItem(parent)
            SceneHeight-boundingRect().height()*huangquanScale);
     setFlag(QGraphicsItem::ItemIsFocusable);//可以获得焦点
     setFocus();//获得焦点
-    startTimer(500);
+    startTimer(300);
 
 }
 //实现动起来
